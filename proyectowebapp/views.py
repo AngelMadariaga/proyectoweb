@@ -4,13 +4,23 @@ from django.shortcuts import render , httpresponse
 
 def home(request):
     
-    return httpresponse ("inicio")
+    return render (request, "proyectowebapp/inicio.html")
     
- def home(request):
+ def registro(request):
         
-    return httpresponse ("inicio")
+     return render (request, "proyectowebapp/registro.html")
 
 
-def home(request):
+def ayuda (request):
     
-    return httpresponse ("inicio")    
+    return httpresponse ("registro ")    
+
+
+
+def conctatos  (request):
+    
+    return httpresponse ("conctatos ")
+
+def blog  (request):
+    
+    return render (request, "proyectowebapp/blog.html")
