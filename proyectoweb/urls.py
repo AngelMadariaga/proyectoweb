@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     path('', include('proyectowebapp.urls')),
-    
+        path('stact', include('proyectowebapp.urls')),
 ]
 
 

@@ -1,6 +1,6 @@
 body {
     font-family: 'Lora';
-    background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg_main.jpg");
+    background: linear-gradient(rgba(163, 157, 157, 0.65), rgba(212, 206, 204, 0.65)), url("../img/bg_main.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -80,7 +80,7 @@ body {
   }
   
   #mainNav {
-    background-color: rgba(24, 64, 8);
+    background-color: rgb(13, 14, 13);
     font-family: 'Raleway';
   }
   
@@ -134,7 +134,7 @@ body {
       left: 600;
       width: 60%;
       margin-top: 3rem;
-      background-color: rgba(24, 64, 8);
+      background-color: rgb(206, 25, 25);
       color: cornsilk;
       position: absolute;
     }
@@ -145,7 +145,7 @@ body {
       bottom: -2rem;
     }
   }
-  
+
   @media (min-width: 1200px) {
     .intro .intro-text {
       width: 45%;
@@ -162,7 +162,7 @@ body {
     position: relative;
     padding: 3rem;
     margin: 0.5rem;
-    background-color: rgba(24, 64, 8);
+    background-color: rgb(25, 27, 24);
     color: cornsilk;
   }
   
@@ -229,7 +229,7 @@ body {
   }
   
   .footer {
-     background-color: rgba(24, 64, 8, 0.8);
+     background-color: rgba(58, 180, 10, 0.8);
   }
   
   
@@ -277,3 +277,6 @@ body {
     font-style: italic;
     color: red;
   }
+ 
+
+  
