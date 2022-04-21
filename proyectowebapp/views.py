@@ -23,3 +23,9 @@ def conctatos  (request):
 def blog  (request):
     
     return render (request, "proyectowebapp/blog.html")
+
+def menu(request):
+    
+    return render (reques, "proyectowebapp/menu.html")
+    
+

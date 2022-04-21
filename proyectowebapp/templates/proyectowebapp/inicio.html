@@ -1,85 +1,21 @@
-<html>
-<title> Inicio</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-
- {% load static%}
-
-    <!-- Bootstrap -->
-    <link href="{% static 'proyectowebapp/vendor/bootstrap/css/bootstrap.min.css' %}"rel="stylesheet">
-
-     <!-- Fonts -->
-    
-     
-     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
-     
-
-   <!-- Styles --> 
-    <link href="{% static 'css/gestion.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inicio.css">
+    <title>Inicio de sesion </title>
 </head>
-
-<body>
-
-    
-
- <!-- Navbar -->
- <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="inicio.html"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item active px-lg-400i">
-            <a class="nav-link text-uppercase text-expanded" href="home.html">Inicio</a>
-          </li>
-          <li> 
-            <input type="search" name="" value="Buscar" placeholder="Buscar">  <input type="submit" value="Buscar">
-          </li>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="registro.html">registro</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="blog.html">Blog</a>
-          </li>
-         
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <center>
-    <div class="iconos-sociales">
-    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en YouTube" height="35" width="35" src=" https://1.bp.blogspot.com/-0Ao8V_ZtT5Q/YPhkfO0JqkI/AAAAAAAAA1U/Sz5GlaSW78AsY3nZpcqeIoPA_HQUSCVLgCPcBGAYYCw/s0/Youtube-icono.png" title=" Sígueme en YouTube "/></a>
-    
-    <a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><img loading="lazy" alt="Sígueme en Facebook" height="35" width="35" src=" https://1.bp.blogspot.com/-Pop-U7OywXs/YPhkfrImyiI/AAAAAAAAA1Y/UBnVfTK9j2U-bIUqwZYMNSQPvz_l06mbwCPcBGAYYCw/s0/facebook-icono.png" title="Sígueme en Facebook"/></a>
-    
-    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en Instagram" height="35" width="35" src="https://1.bp.blogspot.com/-VFfOISywV0c/YPhkeRXuRQI/AAAAAAAAA1M/L75S9Usg5AovunH2Y-VzqJbaaY1LuK3eACPcBGAYYCw/s0/Instagram-icono.png" title="Sígueme en Instagram"/></a>
-    
-    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en WhatsApp" height="35" width="35" src=" https://1.bp.blogspot.com/-Vc_W7xraNnc/YPhkfwQExQI/AAAAAAAAA1c/dI72v37UC0EGJd7jWvKWYD3WMwZ7eER7gCPcBGAYYCw/s0/whatsapp-icono.png" title="Sígueme en WhatsApp"/></a>
-    
-    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt="Sígueme en TikTok" height="35" width="35" src=" https://1.bp.blogspot.com/-rK19lcfnq9c/YPhkfuEwAnI/AAAAAAAAA1U/0ydy_rVmboQtu211UQs7_zMXdMih2LCCwCPcBGAYYCw/s0/tiktok-icono-oscuro.png" title="Sígueme en TikTok"/></a>
-    
-    <a href="URL DE LA RED SOCIAL" target="_blank"><img loading="lazy" alt=" Sígueme en Twitter" height="35" width="35" src=" https://1.bp.blogspot.com/-2JwTJZxg1AU/YPhkfB0DdjI/AAAAAAAAA1c/tDKdU6tS0A0lt4YegGUVd7k-9hguYz82ACPcBGAYYCw/s0/Twitter-icono.png" title="Sígueme en Twitter"/></a>
-    </div>
-
-    </center>
-  
-     
-    <iframe src="http://www.facebook.com/plugins/like.php?locale=es_ES&amp;href=http%3A%2F%2Fcompartidisimo.blogspot.com&amp;send=false&amp;layout=standard&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=80" scrolling="no" frameborder="0" 
-    style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
-
-
-
-
-     <!-- Aquí van los estilos -->
-    
+<body background="imagenes/123.jpg" height="100%"> 
+    <section class="form-login"> 
+       <h5>Inicio De sesion </h5>
+       <input  class="controls"type="text" name="usuario" value="" placeholder="usuario">
+       <input  class="controls"    type="password" name="contraseña" value="" placeholder="contraseña">
+        <a href="blog.html"><input   class="buttons"type="submit" name="" value="ingresar " ></a>
+       <p><a href="#"> ¿olvidastes tu contraseña ?</a></p>
+       <p><a href="formulario.html"> <input  class=" buttons1 "type="submit" name="" value="registrate"></a></p>
+        
+    </section>
 </body>
-  
-
 </html>
-</html>   

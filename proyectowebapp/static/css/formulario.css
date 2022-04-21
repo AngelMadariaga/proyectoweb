@@ -1,4 +1,4 @@
-.form-registro {
+form-registro {
     width: 500px;
     background: #137f9c;
     padding: 50px;
@@ -39,7 +39,7 @@ width: 100%;
 background: rgba(158, 192, 236, 0.527);    
 
 margin-bottom: 16px;
-border: 5px solid rgb(29, 178, 184);
+border: 5px solid rgb(26, 90, 92);
 font-family: "calibri";
 font-size: 18px;
 }
