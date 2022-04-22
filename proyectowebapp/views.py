@@ -14,8 +14,6 @@ def ayuda (request):
     
      return render  (request, "proyectowebapp/blog.html")   
 
-
-
 def conctatos  (request):
     
     return httpresponse ("conctatos ")
@@ -27,5 +25,7 @@ def blog  (request):
 def menu(request):
     
     return render (reques, "proyectowebapp/menu.html")
-    
 
+def autor (request):
+    
+    return render (reques, "proyectowebapp/articulos.html")
