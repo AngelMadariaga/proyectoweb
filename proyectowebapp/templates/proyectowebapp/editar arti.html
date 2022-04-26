@@ -1,0 +1,86 @@
+<html>
+ <head>
+    
+ </head>
+
+ <body>
+
+    {% extends 'base/base.html' %}
+
+{% load static%}
+
+{%block title%}
+Editar 
+{%endblock%}
+
+
+
+{%block content%}
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-7">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Editar</h3>
+
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            {% if form.errors %}
+                            {% for field in form %}
+                            {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error|escape }}</strong>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                            {% endif %}
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="title" value="{{article.title}}" name="title" class="form-control form-control-lg"
+                                    required />
+                                <label class="form-label" for="title">Título del articulo</label>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="file" name="photo" class="form-control" id="photo" required>
+                            </div>
+                            <label for="photo" class="mb-4">Seleccione la imagen del articulo</label>
+
+                            <div class="form-floating mb-5">
+                                <textarea class="form-control" name="introduction" id="introduction" style="height: 120px" required>{{article.introduction}}</textarea>
+                                <label for="introduction">Texto introductorio</label>
+                            </div>
+
+                            <div class="form-floating">
+                                <textarea class="form-control" name="content" id="content" style="height: 200px" required>{{article.content}}</textarea>
+                                <label for="introduction">Contenido del articulo</label>
+                            </div>
+
+                            <div class="input-group mb-3" style="display: none;">
+                                <label class="input-group-text" for="id_author">Options</label>
+                                <select class="form-select" id="id_author" name="author">
+                                  <option value="{{user.id}}" selected>{{user.email}}</option>
+                                </select>
+                            </div>
+
+                            <div class="mt-3" aria-label="Basic mixed styles example">
+                                <a href="{% url 'mis_articulos' pk=user.id %}" class="btn btn-secondary btn-lg" style="float: left;"><i class="fa-solid fa-ban"></i> Cancelar</a>
+                                <button class="btn btn-primary btn-lg" style="float: right;width: 170px;"><i class="fa-solid fa-file-pen"></i> Actualiza</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock%}
+ </body>
+ </html>

@@ -1,7 +1,7 @@
 from django.urls import path
+from.views import home, blog, formulario
 
 
-from proyectowebapp import views
 from django.contrib import admin
 
 

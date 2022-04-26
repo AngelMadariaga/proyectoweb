@@ -4,9 +4,10 @@ from django.shortcuts import render , HttpResponse
 
 def home(request):
     
-    return render (request, "proyectowebapp/inicio.html")
+    return render (request, 'proyectowebapp/inicio.html')
     
 def registro(request):
+    
     return render (request, "proyectowebapp/formulario.html")
 
 

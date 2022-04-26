@@ -3,4 +3,5 @@
  
  urlpattens = [
       url(r'registrar', RegistroUsuario.as_view(), name="registrar")
+      
  ]
