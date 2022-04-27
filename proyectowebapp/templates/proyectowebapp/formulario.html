@@ -11,10 +11,9 @@
     {% extends 'base/base.html' %}
 
     {%block title%}
-    Registrarme
+    Registrate
     {%endblock%}
-    
-    
+
     {%block header%}
     {%endblock%}
     
@@ -88,15 +87,17 @@
                         <div class="center mb-4">
                             <a class="link" href="{% url 'articulos' %}">Ir al menú principal</a>
                         </div>
-    
+                        
+                        <div class="center mb-4">
+                          <a class="link" href="{% url 'articulo'%}"> ir a Editar
+                         
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
-    {%endblock%}
+    {%endblock%} 
     
 </body>
-</html>
+</html>      
