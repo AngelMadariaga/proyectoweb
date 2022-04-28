@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% load static%}
+
+{%block title%}
+ Principal
+{%endblock%}
+
+
+{%block content%}
+
+{%if articles %}
+<div class="row row-cols-1 row-cols-md-3 g-4 m-3">
+  {%for i in articles %}
+  <a href="{% url 'detalle_articulo' title=i.title pk=i.pk %}" style="color: #000;text-decoration: none;">
+    <div class="col shadow">
+      <div class="card h-100">
+        <img src="{{ i.photo.url }}" class="card-img-top" alt="HeadImage">
+        <div class="card-body">
+            <h4 class="card-title">{{ i.title }}</h4>
+            <p class="card-text">{{ i.introduction }}</p>
+        </div>
+        <div class="p-2">
+          <img class="img-fluid img-responsive rounded-circle mr-2" src="{{i.author.image.url}}" width="28">
+            <span class="card-text">{{ i.author.username }}</span>
+            <span class="card-text" style="float: right;">{{i.date|date:'Y-m-d'}}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+{% else %}
+<div class="container mt-5" style="margin-bottom: 120px;">
+    <div class="d-flex justify-content-center row">
+        <div class="d-flex flex-column col-md-8">
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                <h4><i class="fa-solid fa-circle-info"></i> No hay ningún Articulo registrado. <a class="link" href="{% url 'nuevo_articulo' %}">Crear nuevo</a></h4>
+              </div>
+        </div>
+    </div>
+</div>         
+{% endif %}
+
+{%endblock%}

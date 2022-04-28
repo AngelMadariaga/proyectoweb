@@ -1,0 +1,88 @@
+{% extends 'base/base.html' %}
+
+{%block title%}
+Registrarme
+{%endblock%}
+
+
+{%block header%}
+{%endblock%}
+
+{%block content%}
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <h3 class="mb-5">Crear nueva cuenta</h3>
+
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+
+                            {% if form.errors %}
+                            {% for field in form %}
+                            {% for error in field.errors %}
+                            <div class="alert alert-danger">
+                                <strong>{{ error|escape }}</strong>
+                            </div>
+                            {% endfor %}
+                            {% endfor %}
+                            {% endif %}
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="nombre" name="first_name" class="form-control form-control-lg"
+                                    required />
+                                <label class="form-label" for="nombre">Nombres</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="text" id="username" name="username" class="form-control form-control-lg"
+                                    required />
+                                <label class="form-label" for="username">Nombre de Usuario</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                    required />
+                                <label class="form-label" for="email">Corero Electronico</label>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <input type="file" name="image" class="form-control" id="imagen" required>
+                            </div>
+                            <label for="imagen" class="mb-4">Seleccione la imagen de perfil</label>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="password1" name="password1"
+                                    class="form-control form-control-lg" required />
+                                <label class="form-label" for="password1">Contraseña</label>
+                            </div>
+
+                            <div class="form-outline mb-4">
+                                <input type="password" id="password2" name="password2"
+                                    class="form-control form-control-lg" required />
+                                <label class="form-label" for="password2">Confirmar Contraseña</label>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg btn-block" style="width: 100%;">Registrarme</button>
+                        </form>
+                    </div>
+
+                    <div class="center">
+                        <p>Ya tengo una cuenta. <a class="link" href="{% url 'login' %}">Iniciar Sesión.</a></p>
+                    </div>
+
+                    <div class="center mb-4">
+                        <a class="link" href="{% url 'articulos' %}">Ir al menú principal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{%endblock%} 
+
