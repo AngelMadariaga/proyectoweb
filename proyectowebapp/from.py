@@ -19,6 +19,7 @@ class UserForm(UserCreationForm):
             'password1': 'Contraseña',
             'password2': 'Confirmar Contraseña',
             'image': 'Seleccione su imagen',
+            
         }
 
         widgets = {
@@ -29,9 +30,6 @@ class UserForm(UserCreationForm):
             'password1': forms.PasswordInput(),
             'password2': forms.PasswordInput(),
         }
-        
-        
-        
         
 class ArticleForm(forms.ModelForm):
     class Meta:
